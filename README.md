@@ -31,3 +31,7 @@ Files mounted (VHD[X], ISO):
 C:\Users\Andrea\Downloads\ubuntu-20.04.4-desktop-amd64.iso
 
 Analysis Tip: Microsoft-Windows-VHDMP/1 events provide a list of files mounted or "surfaced".
+
+Pivot on VHDMP timestamp of the mount operation, look for shellbags to determine if mount path was opened up, then evidence of presence/ execution artifacts to locate any binaries, check MFT before and after TS for files created and pivot on anything found
+
+There could also be event logs around the TS, like MS office events, wmi and pwsh. If the iso came over the internet, browser history around TS could help determine initial vector if it was webmail, any emails found can then be examined for HTML smuggling.
